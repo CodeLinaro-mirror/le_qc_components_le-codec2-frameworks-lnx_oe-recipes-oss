@@ -1,4 +1,5 @@
 inherit cmake sdllvm
+TOOLCHAIN = "sdllvm"
 
 SUMMARY = "Codec2 multimedia framework"
 LICENSE = "BSD-3-Clause"
@@ -6,11 +7,22 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/${LICENSE};md5
 
 DEPENDS += "llvm-arm-toolchain-native \
         libcutils \
+        libui \
         liblog \
         libion \
+        libdmabufheap \
         gbm \
         libutils \
         linux-msm-headers "
+
+DEBUG_PREFIX_MAP = ""
+
+python () {
+    file = d.getVar("FILE")
+    index = file.rfind("poky")
+    if (index >= 0):
+        d.prependVar("FILESPATH", file[0:index - 1] + ":")
+}
 
 SRCREV = "${AUTOREV}"
 FILESPATH =+ "${WORKSPACE}:"
