@@ -15,14 +15,7 @@ DEPENDS += "llvm-arm-toolchain-native \
         libutils \
         linux-msm-headers "
 
-DEBUG_PREFIX_MAP = ""
-
-python () {
-    file = d.getVar("FILE")
-    index = file.rfind("poky")
-    if (index >= 0):
-        d.prependVar("FILESPATH", file[0:index - 1] + ":")
-}
+PV = "2.1.c1"
 
 SRCREV = "${AUTOREV}"
 FILESPATH =+ "${WORKSPACE}:"
