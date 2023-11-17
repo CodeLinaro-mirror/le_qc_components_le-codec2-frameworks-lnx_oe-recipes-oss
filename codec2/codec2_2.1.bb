@@ -15,8 +15,6 @@ DEPENDS += "llvm-arm-toolchain-native \
         libutils \
         linux-msm-headers "
 
-PV = "2.1.c1"
-
 SRCREV = "${AUTOREV}"
 FILESPATH =+ "${WORKSPACE}:"
 SRC_URI = "file://vendor/qcom/opensource/le-codec2-port/codec2/"
