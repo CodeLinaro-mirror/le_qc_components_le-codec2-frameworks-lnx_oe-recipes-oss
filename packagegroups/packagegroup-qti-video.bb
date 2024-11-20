@@ -14,5 +14,6 @@ PACKAGES = ' \
 RDEPENDS:packagegroup-qti-video = " \
     mmrm-kernel \
     video-kernel \
+    video-kernel-headers \
     codec2 \
 "
