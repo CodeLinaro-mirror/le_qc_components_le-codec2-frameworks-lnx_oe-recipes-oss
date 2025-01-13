@@ -21,6 +21,8 @@ SRC_URI = "file://vendor/qcom/opensource/le-codec2-port/codec2/"
 
 S = "${WORKDIR}/vendor/qcom/opensource/le-codec2-port/codec2"
 
+PV = "2.5"
+
 PACKAGE_ARCH = "${TUNE_ARCH}"
 
 SOLIBS = ".so"
