@@ -9,6 +9,7 @@ DEPENDS += "llvm-arm-toolchain-native \
         liblog \
         libion \
         gbm \
+        display-commonsys \
         libutils \
         linux-msm-headers "
 
