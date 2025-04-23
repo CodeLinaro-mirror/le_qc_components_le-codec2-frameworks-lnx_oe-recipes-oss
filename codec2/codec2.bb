@@ -31,3 +31,4 @@ FILES_SOLIBSDEV = ""
 EXTRA_OECMAKE += " -DCMAKE_INCLUDE_PATH:PATH=${STAGING_INCDIR}/linux-msm/usr/include"
 
 TOOLCHAIN = "sdllvm"
+DEBUG_PREFIX_MAP:remove = "-fcanon-prefix-map"
