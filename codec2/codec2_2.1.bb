@@ -21,7 +21,17 @@ SRC_URI = "file://vendor/qcom/opensource/le-codec2-port/codec2/"
 
 S = "${WORKDIR}/vendor/qcom/opensource/le-codec2-port/codec2"
 
-PACKAGE_ARCH = "${TUNE_ARCH}"
+#PACKAGE_ARCH = "${TUNE_ARCH}"
+PACKAGE_ARCH = "${TUNE_PKGARCH}"
+
+FILES:${PN} += "${libdir}/libcodec2_vndk.so"
+
+do_configure:prepend() {
+    mkdir -p ${WORKDIR}/lib32-recipe-sysroot/usr/lib/gcc/arm-oemllib32-linux-gnueabi/11.5.0
+    ln -sf \
+      ${WORKDIR}/lib32-recipe-sysroot/usr/lib/arm-oemllib32-linux-gnueabi/11.5.0/* \
+      ${WORKDIR}/lib32-recipe-sysroot/usr/lib/gcc/arm-oemllib32-linux-gnueabi/11.5.0/
+}
 
 SOLIBS = ".so"
 FILES_SOLIBSDEV = ""
