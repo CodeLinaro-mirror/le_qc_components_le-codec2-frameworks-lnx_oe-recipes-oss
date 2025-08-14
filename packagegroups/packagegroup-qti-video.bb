@@ -19,3 +19,7 @@ RDEPENDS:packagegroup-qti-video = " \
     video-kernel-headers \
     codec2 \
 "
+
+RDEPENDS:packagegroup-qti-video:remove:kera = " \
+    mmrm-devicetree \
+"
