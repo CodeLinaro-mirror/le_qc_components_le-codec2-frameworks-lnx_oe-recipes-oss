@@ -8,10 +8,13 @@ DEPENDS += "llvm-arm-toolchain-native \
         libcutils \
         liblog \
         libion \
-        gbm \
+	libgbm \
+	libutils \
+        libui \
+        system-core-headers \
+        linux-msm-headers \
         display-commonsys \
-        libutils \
-        linux-msm-headers "
+        libdmabufheap "
 
 SRCREV = "${AUTOREV}"
 FILESPATH =+ "${WORKSPACE}:"
@@ -27,3 +30,4 @@ FILES_SOLIBSDEV = ""
 EXTRA_OECMAKE += " -DCMAKE_INCLUDE_PATH:PATH=${STAGING_INCDIR}/linux-msm/usr/include"
 
 TOOLCHAIN = "sdllvm"
+DEBUG_PREFIX_MAP:remove:seraph = "-fcanon-prefix-map"
