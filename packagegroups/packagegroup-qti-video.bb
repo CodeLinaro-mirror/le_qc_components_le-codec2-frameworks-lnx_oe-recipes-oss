@@ -12,14 +12,8 @@ PACKAGES = ' \
 '
 
 RDEPENDS:packagegroup-qti-video = " \
-    mmrm-devicetree \
     video-devicetree \
-    mmrm-kernel \
     video-kernel \
     video-kernel-headers \
     codec2 \
-"
-
-RDEPENDS:packagegroup-qti-video:remove:kera = " \
-    mmrm-devicetree \
 "
