@@ -23,3 +23,8 @@ RDEPENDS:packagegroup-qti-video = " \
 RDEPENDS:packagegroup-qti-video:remove:kera = " \
     mmrm-devicetree \
 "
+
+RDEPENDS:packagegroup-qti-video:remove:vienna = " \
+    mmrm-kernel \
+    mmrm-devicetree \
+"
