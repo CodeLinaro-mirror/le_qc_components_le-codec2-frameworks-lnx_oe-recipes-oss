@@ -19,7 +19,7 @@ SRCREV = "${AUTOREV}"
 FILESPATH =+ "${WORKSPACE}:"
 SRC_URI = "file://vendor/qcom/opensource/le-codec2-port/codec2/"
 
-S = "${WORKDIR}/vendor/qcom/opensource/le-codec2-port/codec2"
+S = "${UNPACKDIR}/vendor/qcom/opensource/le-codec2-port/codec2"
 
 #PACKAGE_ARCH = "${TUNE_ARCH}"
 PACKAGE_ARCH = "${TUNE_PKGARCH}"
